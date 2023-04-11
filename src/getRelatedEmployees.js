@@ -11,8 +11,9 @@ const isManager = (id) => {
   return retorno;
 };
 
-const getRelatedEmployees = (managerId) => 
-
-console.log(getRelatedEmployees());
+const getRelatedEmployees = (managerId) => {
+  if (isManager(managerId)) { return data.employees.filter((obj) => obj.firstName && obj.lastName); }
+};
+console.log(getRelatedEmployees('9e7d4524-363c-416a-8759-8aa7e50c0992'));
 
 module.exports = { isManager, getRelatedEmployees };
