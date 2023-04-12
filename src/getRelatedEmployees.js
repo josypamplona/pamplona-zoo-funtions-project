@@ -14,7 +14,9 @@ const isManager = (id) => {
 const getRelatedEmployees = (managerId) => {
   const gerente = data.employees.filter((arrey2) => arrey2.managers.includes(managerId));
   const empregado = gerente.map((arrey3) => `${arrey3.firstName} ${arrey3.lastName}`);
-  if (isManager(managerId) === false) { throw new Error('O id inserido não é de uma pessoa colaboradora gerente!'); }
+  if (isManager(managerId) === false) {
+    throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
+  }
   return empregado;
 };
 

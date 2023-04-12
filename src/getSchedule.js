@@ -1,7 +1,7 @@
-const employees = require('../data/zoo_data');
+const data = require('../data/zoo_data');
 
 const getSchedule = (scheduleTarget) => {
   // seu código aqui
 };
 
-module.exports = getSchedule;
+export default (getSchedule);
