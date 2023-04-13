@@ -1,6 +1,7 @@
 const data = require('../data/zoo_data');
 
-const getAnimalMap = (options) => {};
+function getAnimalMap(options) {
+}
 // data.species.reduce((acc, curr) => {
 // acc[curr.location] = [];
 // const state = data.species.find((location) => state.short === curr.state);
