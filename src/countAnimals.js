@@ -16,5 +16,4 @@ const countAnimals = (obj) => {
   return contar;
 };
 
-
 module.exports = countAnimals;
