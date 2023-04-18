@@ -39,11 +39,11 @@ const getSchedule = (scheduleTarget) => {
   const array = Object.keys(horaToda);
   if (animais) {
     return animais.availability;
-  } if ( array.every((dias) => dias !== scheduleTarget)) {
+  } if (array.every((dias) => dias !== scheduleTarget)) {
     return horaToda;
   } if (scheduleTarget) {
     return { [scheduleTarget]: horaToda[scheduleTarget] };
   }
 };
-console.log(getSchedule());
+
 module.exports = getSchedule;
