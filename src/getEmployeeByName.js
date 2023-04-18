@@ -9,6 +9,6 @@ const getEmployeeByName = (employeeName) => {
   return empregados;
 };
 
-console.log(getEmployeeByName('Bethea'));
+// console.log(getEmployeeByName('Bethea'));
 
 module.exports = getEmployeeByName;
