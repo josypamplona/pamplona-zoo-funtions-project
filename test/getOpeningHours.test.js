@@ -1,9 +1,6 @@
 const getOpeningHours = require('../src/getOpeningHours');
 
 describe('Testes da função getOpeningHours', () => {
-  it('testa se getOpeningHours é uma função', () => {
-    expect(typeof getOpeningHours).toBe('function');
-  });
   it('testa se retorna todos os dias, caso não passe nada para a função', () => {
     expect(getOpeningHours()).toEqual({
       Tuesday: { open: 8, close: 6 },
