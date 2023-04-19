@@ -14,7 +14,6 @@ const validateAbbreviation = (abbreviation) => {
     throw new Error('The abbreviation must be \'AM\' or \'PM\'');
   }
 };
-
 const validateHour = (hour) => {
   const [number, abbreviation] = hour.toUpperCase().split('-');
   const [dataHours, dataMinutes] = number.split(':');
