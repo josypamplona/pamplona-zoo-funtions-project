@@ -1,15 +1,25 @@
 const getOpeningHours = require('../src/getOpeningHours');
 
 describe('Testes da função getOpeningHours', () => {
-  it('Já que o Zoo está sempre fechado na segunda Para os argumentos Monday e 09:00', () => {
-    expect(getOpeningHours()).toEqual({ Friday: { close: 8, open: 10 },
-      Monday: { close: 0, open: 0 },
-      Saturday: { close: 10, open: 8 },
-      Sunday: { close: 8, open: 8 },
-      Thursday: { close: 8, open: 10 },
-      Tuesday:
-    { close: 6, open: 8 },
-      Wednesday: { close: 6, open: 8 },
-    });
+  it('confere se o zoologico ta aberto e retorn', () => {
+    expect(getOpeningHours('Saturday', '12:30-AM')).toEqual('The zoo is closed');
+  });
+  it('confere se o zoologico ta aberto', () => {
+    expect(getOpeningHours('Tuesday', '01:40-PM')).toEqual('The zoo is open');
+  });
+  it('confere se o zoologico está fechado?', () => {
+    expect(getOpeningHours('Tuesday', '11:15-PM')).toEqual('The zoo is closed');
+  });
+  it('confere se o zoologico t', () => {
+    expect(getOpeningHours('Tuesday', '09:15-PM')).toEqual('The zoo is closed');
+  });
+  it('confere se o zoologico está fechado?', () => {
+    expect(getOpeningHours('Saturday', '10:15-PM')).toEqual('The zoo is closed');
+  });
+  it('confere se o zoologico está fechado hoje?', () => {
+    expect(getOpeningHours('Saturday', '12:15-PM')).toEqual('The zoo is open');
+  });
+  it('confere se o zoologico está fechado hoje a tarde?', () => {
+    expect(getOpeningHours('Saturday', '09:15-PM')).toEqual('The zoo is open');
   });
 });
